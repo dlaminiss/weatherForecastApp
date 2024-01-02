@@ -1,0 +1,455 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*-----------End of CSS reset-------------------------------*/
+
+
+/*Column grids 12 in total*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.column {
+    float: left;
+    min-height: 1px;
+}
+
+.row:before, .row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+body {
+  font-family: ariel, sans-serif;;
+}
+
+.header_container{
+	background: url(images/headerimage.jpg);
+	min-height: 200px;
+}
+
+/*style for the header div*/
+.header1{
+	margin-left: auto;
+	margin-right: auto;
+}
+/*adjusting size and float of logo image in header*/
+.header1 img{
+	height: 78px;
+	width: 200px;
+	float: left;
+}
+/*header text style*/
+.header1 h1{
+	font-family:Monoton;
+	font-size: 45px;
+	color: blue;
+}
+
+/*styling the navigation*/
+.nav_container ul {
+	clear: both;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+
+.nav_container ul li {float: left;}
+
+
+.nav_container a {
+	display: inline-block;
+	color: #f2f2f2;
+	font-weight: bold;
+	text-align: center;
+	padding: 14px 16px;
+	border: 1px black;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: 0.3s;
+	font-size: 17px;
+}
+
+.nav_container a:hover {background-color: #555;}
+
+.nav_container li.icon {display: none;}
+
+
+.formgroup{
+	display: inline;
+}
+
+/*styling search button and search box"*/
+.searchbtn {
+	padding: 6px;
+	background: #607d8b;
+	border:1px solid;
+	color:white;
+	margin-left: -5px;
+	cursor: pointer;
+	border-radius: 0 5px 5px 0;
+}
+
+.searchbtn:hover{
+	background: #333;
+	transition: all 0.40s;
+}
+
+/*style all input boxes*/
+input{
+	width: 100px;
+	padding: 7px;
+	border: 1px;
+	border-radius: 4px;
+}
+
+/*style for drop down selection menu at header*/
+#data_type{
+	margin-top: 5px;
+	padding: 6px;
+	border: 1px;
+	border-radius: 4px;
+}
+
+/*style for current weather data container*/
+#weatherDatacontainer{
+	margin-left: 5px;
+	font-size: 25px;
+	font-weight: bold;
+	color:#343f46;
+}
+
+#current_weather{
+	font-family: play;
+}
+
+/*current weather table*/
+#current_weather_table{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#current_weather_table table {
+  	width: 100%;
+}
+#current_weather_table td {
+    border: 0px;
+	height: 35px;
+	text-align: left;
+	vertical-align: bottom;
+	padding: 5px;
+}
+
+/*colour background of every even child of the table*/
+#current_weather_table  tr:nth-child(even){
+	background-color: #3e8494;
+}
+
+#curr_header{
+	text-align: center;
+	font-size: 30px;
+	font-family:Play;
+}
+
+/* style for weather icon image on top of current weather table*/
+#weatherDatacontainer img{
+	height: 80px;
+	width: 80px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*style for temperature and weather description on top of current weather table*/
+#temp1{
+	text-align: center;
+	font-family: Play;
+}
+
+/*style for drop down select menu in on top of weather forecast table*/
+#data_type1{
+	padding: 7px;
+	border: 1px;
+	border-radius: 4px;
+}
+
+
+#days_control{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#weather_forecast{
+	display: none;/*disable display of forecast data until weatherForecast function called in javascript*/
+}
+
+#forecast_header{
+	text-align: center;
+	font-size: 35px;
+	margin-top: 10px;
+}
+
+#forecastDatacontainer{
+	margin-left: 5px;
+	color:#343f46;
+	font-family:Play;
+}
+
+#forecast_table table{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#forecast_table td {
+    border: 0px;
+	height: 35px;
+	text-align: left;
+	vertical-align: middle;
+	padding: 2px;
+}
+
+#forecast_table  tr:nth-child(even){
+	background-color: #3e8494;
+}
+
+/*style clock container*/
+.clock_container{
+	border: 0px solid #328b8e;
+	background-color: #3e8494;
+	border-radius: 7px;
+	min-height: 100px;
+	padding: 10px;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	font-size: 45px;
+	text-align: center;
+	font-size: 30px;
+	color: #343f46;
+	width: 95%;
+}
+
+#timezone{
+	width: 80%;
+	min-height: 550px;
+	border-left: 3px solid #3e8494;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Play;
+	padding-top: 10px;
+	padding-left: 10px;
+	margin-top: 3px;
+	margin-bottom: 5px;
+	color: #343f46;
+}
+
+/*style sunset-sunrise table*/
+#timezoneTable{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#timezoneTable table {
+	display: none;/*disable temporaly*/
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#timezoneTable td {
+	border: 1px solid #5ab4db;
+	height: 35px;
+	text-align: left;
+	vertical-align: middle;
+	padding: 5px;
+	font-size: 25px;
+}
+
+#timezoneTable img{
+	height: 64px;
+	width: 64px;
+}
+
+/*style for form containing drop down selection menu for selecting images in weather maps page and button*/
+#maps_images{
+	position: absolute;
+	z-index: 1;
+	margin-left: 40px;
+}
+
+#data_type3{
+	margin-top: 5px;
+	padding: 6px;
+	border: 1px;
+	border-radius: 4px;
+}
+
+/*weather maps conatiner*/
+#weathermap{
+	width: 99%;
+	height:400px;
+	border: 0px solid black;
+	position: absolute;
+}
+
+/*footer style*/
+.page_footer{
+	width: 100%;
+	height: 100px;
+	background-color: #3e8494;
+}
+
+/*for map images page*/
+.page_footer1{
+	width: 100%;
+	height: 100px;
+	background-color: #3e8494;
+	position: absolute;
+	bottom: 0px;
+}
+
+#footermenu{
+	margin-top: 10px;
+	text-align: center;
+	font-family: Play;
+	font-size: 25px;
+}
+#footermenu a{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+#attribution{
+	text-align: center;
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size: 20px;
+	font-family: Caveat;
+}
+
+#attribution a{
+	text-decoration: none;
+	color: inherit;
+}
+
+/*---------------Responsive quiries start here-----------*/
+
+/*this code achieves responsiveness of the navigation*/
+@media screen and (max-width:680px) {
+	ul.nav_container li:not(:first-child) {display: none;}
+
+	ul.nav_container li.icon {
+		float: right;
+		display: inline-block;
+	 }
+	ul.nav_container.responsive {position: relative;}
+
+	ul.nav_container.responsive li.icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	ul.nav_container.responsive li {
+		float: none;
+		display: inline;
+	}
+
+	ul.nav_container.responsive li a {
+		display: block;
+		text-align: left;
+	}
+}
+
+
+@media screen and (max-width:500px) {
+	.header1 h1{clear: both; text-align: center;}
+}
+
+@media screen and (max-width:800px) {
+ /*new column sizes at max-width 800px*/
+	.col-m-1 {width: 8.33%;}
+	.col-m-2 {width: 16.66%;}
+	.col-m-3 {width: 25%;}
+	.col-m-4 {width: 33.33%;}
+	.col-m-5 {width: 41.66%;}
+	.col-m-6 {width: 50%;}
+	.col-m-7 {width: 58.33%;}
+	.col-m-8 {width: 66.66%;}
+	.col-m-9 {width: 75%;}
+	.col-m-10 {width: 83.33%;}
+	.col-m-11 {width: 91.66%;}
+	.col-m-12 {width: 100%;}
+	.column {clear: both;}
+
+	#timezone{border-left: none; padding-left: 0px;}
+	.clock_container{width: 60%; margin-left: auto;margin-right: auto;}
+}
+
+@media screen and (max-width:430px) {
+	.clock_container{width: 95%; font-size: 20px; min-height: 80px;}
+	#curr_header, #current_weather, #timezoneTable td {font-size: 20px;}
+}

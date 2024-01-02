@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="forecast.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton%7CPlay%7CCaveat">
+    <title>Weather man</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="column col-12 col-m-12">
+          <div class="header_container">
+            <div class="header1">
+              <a href="index1.html"><img src="images/logo.png" alt=""></a>
+              <h1>Reliable Weather</h1>
+            </div>
+            <div class="nav_container">
+              <ul class="nav_container" id="myTopnav">
+                <li><a class="active" href="index1.html">Home</a></li>
+                <li><a href="index2.html">Forecast</a></li>
+                <li><a href="index3.html">Maps</a></li>
+                <li>
+                  <div class="formgroup">
+                    <input id="city" placeholder="Search city..">
+                    <button class="searchbtn" type="button" onclick="myFunction()">Search</button>
+                  </div>
+                </li>
+                <li class="icon">
+                  <a href="javascript:void(0);" style="font-size:35px;" onclick="responsiveMenu()">&#9776;</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+       <div id="weather_forecast">
+        <div class="column col-12 col-m-12">
+          <div id="forecastDatacontainer" style="overflow-x:auto;">
+              <h1 id='forecast_header'>data coming...</h1>
+              <div id='days_control'>
+                <select id='data_type1'>
+                  <option style="color:gray" value="null">Select Day</option>
+                  <option value="d1"> Day 1</option>
+                  <option value="d2"> Day 2</option>
+                  <option value="d3"> Day 3</option>
+                  <option value="d4"> Day 4</option>
+                  <option value="d5"> Day 5</option>
+                </select>
+              <button class="searchbtn" onclick="myFunction()">Search</button><br>
+            </div>
+          <div id="forecast_table"></div>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column col-12 col-m-12">
+        <div class="page_footer">
+          <p id='footermenu'><a href="index1.html">HOME</a>|<a href="index2.html">FORECAST</a>|<a href="index3.html">MAPS</a></p>
+          <p id='attribution'>Designed by Senzo Dlamini,for Cardiff University <br>Powered by <a href="http://www.openweathermap.org/" target="_blank">openWeathermaps</a></p>
+        </div>
+      </div>
+    </div>
+   </div>
+ </body>
+</html>

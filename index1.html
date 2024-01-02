@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="myapp.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton%7CPlay%7CCaveat">
+    <title>Weather man</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="column col-12 col-m-12">
+          <div class="header_container">
+            <div class="header1">
+              <a href="index1.html"><img src="images/logo.png" alt=""></a>
+              <h1>Reliable Weather</h1>
+            </div>
+            <div class="nav_container">
+              <ul class="nav_container" id="myTopnav">
+                <li><a class="active" href="index1.html">Home</a></li>
+                <li><a href="index2.html">Forecast</a></li>
+                <li><a href="index3.html">Maps</a></li>
+                <li>
+                  <div class="formgroup">
+                    <select id='data_type'>
+                      <option style="color:gray" value="null">-Select one option-</option>
+                      <option value="current"> Current Weather</option>
+                      <option value="forecast"> Weather Forecast</option>
+                    </select>
+                    <input id="city" placeholder="Search city..">
+                    <button class="searchbtn" type="button" onclick="myFunction()">Search</button>
+                  </div>
+                </li>
+                <li class="icon">
+                  <a href="javascript:void(0);" style="font-size:35px;" onclick="responsiveMenu()">&#9776;</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div id='current_timezone'>
+          <div class="column col-7 col-m-12" >
+            <!--I have addedd style="overflow-x:auto;" to have scroll for table in
+            small screens-->
+            <div id="weatherDatacontainer" style="overflow-x:auto;">
+              <div>
+                <h1 id='curr_header'>Current Weather in<br>GB, London</h1>
+                <img id='weathericon' src='images/placeholder.png' alt="weathericon">
+                <h2 id='temp1'>data coming....</h2>
+              </div>
+              <div id='current_weather'>
+                <table id='current_weather_table'>
+                  <tr>
+                    <td>Weather </td>
+                    <td> Details</td>
+                  </tr>
+                  <tr>
+                    <td>Temperature</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Maximum Temperature</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Minimum Temperature</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Cloud Cover</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Humidity</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Pressure</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>Wind Speed</td>
+                    <td></td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        <div class='column col-5 col-m-12'>
+          <div id="timezone">
+            <div class="clock_container">
+              <h1 id='clock'>data coming...</h1>
+            </div>
+            <table id='timezoneTable'>
+              <tr>
+                <td>Sunrise</td>
+                <td><img src="images/sunrise.png" alt="sunrise icon"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Sunset</td>
+                <td><img src="images/sunset.png" alt="sunset icon"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Day length</td>
+                <td><img src="images/daylen.png" alt="daylength icon"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Twiligth Begin</td>
+                <td><img src="images/twilightbgn.png" alt="twilightbgn icon"></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Twiligth End</td>
+                <td><img src="images/twilightend.png" alt="twilightend icon"></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div id="weather_forecast">
+        <div class="column col-12 col-m-12">
+          <div id="forecastDatacontainer" style="overflow-x:auto;">
+              <h1 id='forecast_header'>data coming...</h1>
+              <div id='days_control'>
+                <select id='data_type1'>
+                  <option style="color:gray" value="null">Select Day</option>
+                  <option value="d1"> Day 1</option>
+                  <option value="d2"> Day 2</option>
+                  <option value="d3"> Day 3</option>
+                  <option value="d4"> Day 4</option>
+                  <option value="d5"> Day 5</option>
+                </select>
+              <button class="searchbtn" onclick="myFunction()">Search</button><br>
+            </div>
+          <div id="forecast_table"></div>
+        </div>
+       </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column col-12 col-m-12">
+        <div class="page_footer">
+          <p id='footermenu'><a href="index1.html">HOME</a>|<a href="index2.html">FORECAST</a>|<a href="index3.html">MAPS</a></p>
+          <p id='attribution'>Designed by Senzo Dlamini,for Cardiff University <br>Powered by <a href="http://www.openweathermap.org/" target="_blank">openWeathermaps</a></p>
+        </div>
+      </div>
+    </div>
+   </div>
+ </body>
+</html>
